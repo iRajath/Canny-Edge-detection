@@ -24,7 +24,7 @@ Using Sobel operator from cv2,detect the edges of the image.
 Using Laplacian operator from cv2,detect the edges of the image and Using Canny operator from cv2,detect the edges of the image.
 
 ## Output:
-```
+```python
 import cv2
 import numpy as np
 
@@ -40,7 +40,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 ![image](https://github.com/user-attachments/assets/bf1f76c4-8d52-42a6-8d6e-900a68e2fb74)
 
 ### SOBEL EDGE DETECTOR
-```
+```py
 # Detect edges in X and Y directions
 sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=3)
 sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=3)
@@ -56,7 +56,7 @@ sobel_combined = cv2.convertScaleAbs(sobel_combined)
 
 
 ### LAPLACIAN EDGE DETECTOR
-```
+```py
 laplacian = cv2.Laplacian(gray, cv2.CV_64F)
 laplacian = cv2.convertScaleAbs(laplacian)
 ```
@@ -66,11 +66,11 @@ laplacian = cv2.convertScaleAbs(laplacian)
 
 
 ### CANNY EDGE DETECTOR
-```
+```py
 canny = cv2.Canny(gray, 100, 200)  # Adjust thresholds as needed
 
 ```
-```
+```py
 cv2.imshow('Original', image)
 cv2.imshow('Sobel X', cv2.convertScaleAbs(sobelx))
 cv2.imshow('Sobel Y', cv2.convertScaleAbs(sobely))
